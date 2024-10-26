@@ -1,4 +1,4 @@
-const apikey="d54fd4c977cbc6eaf2350839aea99eb3";
+const apikey="741ca2075a3cb5254867b731abd45cd3";
 const apiurl="https://api.openweathermap.org/data/2.5/weather?q=";
 
 const searchBox=document.querySelector(".search input")
@@ -15,7 +15,7 @@ async function checkweather(city) {
 
         console.log(data)
         document.querySelector(".city").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round((data.main.temp + "°c")/10) ;
+        document.querySelector(".temp").innerHTML = Math.floor(data.main.temp/10) + "°c" ;
         document.querySelector(".humidity").innerHTML = data.main.humidity  +"%";
         document.querySelector(".wind").innerHTML = data.wind.speed +"km/h";
     
@@ -43,3 +43,9 @@ async function checkweather(city) {
 searchBtn.addEventListener('click',()=>{
     checkweather(searchBox.value)
 })
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        checkweather(searchBox.value)
+    }
+  });
+  
