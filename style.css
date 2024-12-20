@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url(/assets/bg1.jpg);
+    background-image: url(/assets/bg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -22,7 +22,7 @@ header{
 header span{
     font-family:cursive;
     font-weight: 600;
-    color: #ffffff;
+    color: #000;
     padding-bottom: 1vh;
     /* font-style: italic; */
 }
